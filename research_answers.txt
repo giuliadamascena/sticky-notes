@@ -1,0 +1,14 @@
+1. How HTTP Applications Preserve State:
+HTTP is a stateless protocol, meaning that each request from a client to a server is independent and does not
+retain information about previous interactions. To maintain state across multiple request-response cycles—especially
+for things like user authentication—applications use mechanisms like sessions and cookies. In Django, when a user logs in,
+a session is created and stored on the server, and a session ID is saved in a cookie on the user’s browser. For each request,
+Django reads this cookie to retrieve session data and determine whether a user is authenticated. Additional tools like tokens
+(used in REST APIs) and OAuth can also manage authentication in a secure and scalable way.
+
+2. Django Migrations to MariaDB:
+To use MariaDB (a MySQL-compatible relational database) with Django, you must first install the necessary database driver,
+such as mysqlclient. After that, update the DATABASES setting in settings.py with your MariaDB credentials (e.g., host, name, user,
+and password). Once configured, run python manage.py makemigrations to generate migration files and python manage.py migrate to apply
+them to the MariaDB database. Make sure your database and user are already created in MariaDB with the appropriate privileges.
+These steps allow Django to create the necessary tables and manage schema changes in a MariaDB environment.

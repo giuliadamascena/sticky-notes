@@ -1,0 +1,31 @@
++--------------------+
+|      Note           |
++--------------------+
+| - id: Integer (PK)  |
+| - title: String     |
+| - content: Text     |
+| - created_at: DateTime |
+| - updated_at: DateTime |
++--------------------+
+| + __str__()         |
++--------------------+
+
++--------------------+
+|     User            |
++--------------------+
+| - id: Integer (PK)  |
+| - username: String  |
+| - email: String     |
+| - password: String  |
++--------------------+
+| + authenticate()    |
++--------------------+
+
++----------------------+
+|    NoteManager       |
++----------------------+
+| + create_note()      |
+| + update_note()      |
+| + delete_note()      |
+| + list_notes()       |
++----------------------+
